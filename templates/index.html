@@ -4,8 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    ::root{
+        --div-clr :#5D0076;
+        --primar-clr:#000000 ;
+        --secondary-clr:#C900FF ;
+    }
+    *{
+        margin:0 ;
+        overflow-x: hidden;
+    }
+    body{
+        height:100%;
+        width:device-width;
+        padding:0px ;
+        margin:0 ;
+        background-color: #000000;
+        color:white ;
+        
+    } 
+    .body-container{
+        display: flex ;
+        flex-direction:column;
+    }
+    header{
+        height:150px;
+        width:100%;
+        .header-section{
+            height:100%;
+            width:100% ;
+            border-top-left-radius: 20px;
+             border-top-right-radius: 20px;
+            background:linear-gradient(to bottom , #5D0076 , #000000);
+            /* background-color: red; */
+            color:white ;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }
+    .section-1{
+        height:60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        /* border-bottom:1px solid #5D0076; */
+    }
+    .section-2 {
+        height:40%;
+        /* border-bottom:0.1px solid #5D0076; */
+        align-items: center;
+        justify-content: space-around;
+        width:100%;
+        
+        ul{
+        height:100%;
+        display: flex;
+        flex-direction: row;
+        /* gap:calc(100% /3); */
+        align-items: center;justify-content: space-around;
+        li{
+            transition:all 0.3s ease-in;
+        }
+    }
+    }
+    li:hover{
+        transform: scale(1.08); /* Slightly enlarge on hover */
+        border-bottom:2px solid #C900FF;
+    }
+    .active{
+        color:#C900FF;
+        font-size:25px;
+    }
+    .hero-section{
+        width:100%;
+        height:100%;
+        display:flex;
+        flex-direction:row;
+        gap:calc(100% / 20);
+        padding:30px;
+    }
+    .profile{
+        width:450px;
+        height: 500px;
+        padding:7px 5px 7px 5px;
+        background:radial-gradient( #c800ff ,#4d0163, #000000) ;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        gap:10px;
+        border-radius:20px;
+        .pfp{
+            height:200px;
+            width:200px;
+            border-radius:100%;
+            background-color: #C900FF;
+        }
+        .details{
+            text-align: center;
+        }
+    }
+    .achievements{
+        width:calc(100% - 500px);
+        height:calc(100% - 500px);
+    }
+    .total-challenges{
+        height:300px;
+         background:radial-gradient( #c800ff ,#4d0163, #000000) ;
+    }
+    </style>    
 </head>
 <body>
-    
+    <div class="body-container">
+        <header>
+            <div class="header-section">
+            <div class="section-1">
+                <h2>geTaLife</h3>
+                <h4>Quote of the day: Hardwork</h4> 
+            </div>
+            <div class="section-2">
+                <ul>
+                    <li>Challenges</li>
+                    <li>Posts</li>
+                    <li class="active">Profile</li>
+                </ul>
+            </div>
+            </div>
+        </header>
+        <main>
+            <section class="hero-section">
+                <div class="profile">
+                    <div class="pfp">
+                    </div>
+                    <div class="details">
+                        <h1 class="name"> Anjali Bahuguna</h1>
+                        <p class="profession">Software Developer,Full Stack Web Developer</p>
+                    </div>
+                </div>
+                <div class="achievements">
+                    <div class="total-challenges">
+                        <h3>Challenges-completed: </h3>
+                        <p>nclkvjnkdfjncv</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+    </div>
 </body>
 </html>
