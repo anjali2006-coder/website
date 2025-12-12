@@ -43,7 +43,7 @@
         <div class="flex-1">
         <ul class="flex place-self-center items-center gap-[50px]">
         <li >About Us</li>
-        <li class="bg-[#238b45] text-white px-8 py-2 rounded-xl hover:bg-[#006d2c] hover:outline-2 hover:outline-offset-2 hover:outline-[#006d2c]">Login</li>
+        <li onclick="goLogin()" class="bg-[#238b45] text-white px-8 py-2 rounded-xl hover:bg-[#006d2c] hover:outline-2 hover:outline-offset-2 hover:outline-[#006d2c]">Login</li>
         <li>Sign-up</li>
     </ul>
     </div>
@@ -54,7 +54,7 @@
             <h1 class="text-3xl text-bold text-[#006d2c] mb-[20px]">ReLiveIt</h1>
             <h1 class="text-xl bold text-justify">Give What You Do not Need. Help Someone Reuse What They Do.</h1>
             <p class="text-justify">A community-driven platform where you can give away usable items you no longer need — and let others turn them into something meaningful. Reduce waste, support reuse, and make a positive impact effortlessly.</p>
-            <button class="text-xl text-[#006d2c] px-4 py-2 bg-white rounded-xl hover:bg-[#006d2c] hover:text-white">Join Us Now -></button>
+            <button onclick="goLogin()" class="text-xl text-[#006d2c] px-4 py-2 bg-white rounded-xl hover:bg-[#006d2c] hover:text-white">Join Us Now -></button>
         </div>
         <div class="right-section w-[700px]">
             <img src="/website/src/images/img_2.png" class="h-[620px] w-[680px]" alt="img-1">
@@ -93,7 +93,7 @@
             <h2 class="text-3xl text-extrabold text-center">Join the movement</h2>
             <p class="text-center">Start decluttering with purpose.</p>
             <div class=" h-20 w-[500px] text-bold text-center">Help someone. Save resources. Spread Kindness.</div>
-            <button class="text-xl  px-4 py-2  bg-[#006d2c] rounded-xl text-white transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl">Get Started -></button>
+            <button onclick="goLogin()" class="text-xl  px-4 py-2  bg-[#006d2c] rounded-xl text-white transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl">Get Started -></button>
 
         </div>
     </div>
@@ -127,5 +127,11 @@
   </footer>
   <!-- footer-end -->
 </div>
+
+<script>
+    function goLogin() {
+        window.location.href = '/login';
+    }
+</script>
 </body>
 </html>

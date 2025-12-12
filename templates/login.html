@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReliveIt</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+        *{
+            font-family: 'Amaranth';
+        }
+        body{
+            height:100%;
+            width:100%;
+            /* background-color: black; */
+            /* background:url(https://naturespath.com/cdn/shop/articles/planet_health-821267.jpg?v=1725927155&width=2000); */
+            background: url(https://i.pinimg.com/1200x/7a/76/1d/7a761d0c69df3858fceff11ef8708f48.jpg);
+            background-repeat:no-repeat;
+            background-size:cover;
+            color:#006d2c;
+
+        }
+        .main_section{
+            height:100%;
+            width:100%;
+            display: flex;
+            justify-content: center;
+            padding:20px;
+            padding-top: 90px;
+        }
+        .login-form{
+            background-color:#ffffff7e;
+            height:600px;
+            width:900px;
+            border-radius:20px;
+            box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.508);
+            padding:20px;
+        }
+        input{
+            box-shadow:2px 2px rgba(0, 0, 0, 0.508);
+        }
+    </style>
+</head>
+<body>
+    <div class="main_section">
+        <div class="login-form">
+            <h1 class="text-3xl text-bold text-center">Login Please</h1>
+            <form  method="post" class="flex flex-col gap-10">
+                <div class="flex flex-col gap-3">
+                <label for="name">Name</label>
+                <input type="text" name="username" class="h-8 w-80 px-4 py-4 outline-none bg-[#ffffff5a] rounded" required>
+                </div>
+                <div class="flex flex-col gap-3">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="h-8 w-80 px-4 py-4 outline-none bg-[#ffffff5a] rounded" required>
+                </div>
+                <input type="submit" class="w-30 h-10 rounded-xl bg-[#006d2c] text-[#e5f5e0] px-4 py-2" value="Login">
+                <p>New? Create an account <br> <a href="">Sign-up</a></p>
+            </form>
+            <div class="login-box">
+    <h2>Login</h2>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+        </div>
+    </div>
+</body>
+</html>
